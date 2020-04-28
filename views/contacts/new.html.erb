@@ -1,0 +1,37 @@
+<div class="main">
+  <div class="container">
+    <div class="form-heading">お問い合わせ</div>
+    <div class="form users-form">
+      <div class="form-body">
+        <% @contact.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        
+        <%= form_tag("/contacts/create") do %>
+          <p>名前<span class="required">必須</span></p>
+          <input name="name" value="<%= @contact.name %>">
+          <p>メールアドレス<span class="required">必須</span></p>
+          <input name="email" value="<%= @contact.email %>">
+          <div class="category">
+            <p>カテゴリー<span class="required">必須</span></p>
+          <div class="cp_ipselect cp_sl04">
+            <select name="category">
+              <option value="">選択してください</option>
+              <option value="商品について">商品について</option>
+              <option value="販売について">販売について</option>
+              <option value="宣伝について">宣伝について</option>
+              <option value="要望提案">要望提案</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          </div>
+          <p>内容<span class="required">必須</span></p>
+          <textarea name="content" value="<%= @contact.content %>"></textarea>
+          <input type="submit" value="送信">
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

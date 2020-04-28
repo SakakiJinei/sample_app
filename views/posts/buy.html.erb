@@ -1,0 +1,50 @@
+<div class="main posts-show">
+  <div class="container">
+    <h1 class="form-heading">購入する</h1>
+    <div class="posts-show-item">
+      <div class="post-user-name">
+        <img src="<%= "/user_images/#{@user.image_name}" %>">
+        <%= link_to(@user.name, "/users/#{@user.id}") %>
+      </div>
+      
+      <div>
+        <div class="post-left-show">
+          <img src="<%= "/post_images/#{@post.image_name}" %>">
+        </div>
+        <div class="post-right-show">
+          <p>
+            <%= link_to(@post.title, "/posts/#{@post.id}") %>
+            <%= @post.category %>
+          </p>
+          <p><%= @post.content %></p>
+          <p><%= @post.price %>円</p>
+          
+          <%= form_tag("/buys/#{@post.id}/create") do %>
+            <div class="buy">購入数</div>
+            <div class="form-buy">
+              <div class="cp_ipselect cp_sl04">
+               <select name="number">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              </div>
+            </div>
+            <div class="post-buy">
+              <input type="submit" value="購入する">
+            </div>
+            <%= @post.created_at %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
+
+ 

@@ -1,0 +1,51 @@
+<div class="main users-edit">
+  <div class="container">
+    <div class="form-heading">評価を編集</div>
+    <div class="form users-form">
+      <div class="form-body">
+        
+        <%= form_for [@value], :url => {:controller => 'values', :action => 'update'} do |f| %>
+      
+        <%= f.hidden_field :product_id, { value: @value.id} %>
+        <div class="form-group row">
+          <%= f.label :title, 'タイトル ', class:'col-md-3 col-form-label' %>
+          <div class="col-md-9">
+            <%= f.text_field :title, class: "form-control" %>
+          </div>
+        </div>
+      
+        <div class="form-group row" id="star">
+          <%= f.label :rate,'評価 ', class:'col-md-3 col-form-label' %>
+          <%= f.hidden_field :rate, id: :review_star %>
+        </div>
+      
+        <script>
+        $('#star').raty({
+          size     : 36,
+          starOff:  '<%= asset_path('star-off.png') %>',
+          starOn : '<%= asset_path('star-on.png') %>',
+          starHalf: '<%= asset_path('star-half.png') %>',
+          scoreName: 'value[rate]',
+          half: true,
+        });
+        </script>  
+      
+        <div class="form-group row">
+          <%= f.label :content, '口コミ内容 ', class:'col-md-3 col-form-label' %>
+          <div class="col-md-9">
+            <%= f.text_area :content, class: "form-control", rows: "8" %>
+          </div>
+        </div>
+      
+        <div class="form-group row justify-content-end">
+          <div class="col-md-9">
+            <%= f.submit '投稿する', class:"btn btn-success" %>
+          </div>
+        </div>
+      
+      <% end %>
+      
+      </div>
+    </div>
+  </div>
+</div>

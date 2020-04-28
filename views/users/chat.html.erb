@@ -1,0 +1,59 @@
+<div class="main user-show">
+  <div class="container">
+    <div class="user">
+      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <h2><%= @user.name %></h2>
+      <p><%= @user.email %></p>
+      <% if @user.id == @current_user.id %>
+        <%= link_to("編集", "/users/#{@user.id}/edit") %>
+        <%= link_to("退会", "/users/#{@user.id}/destroy", {method: "post"}) %>
+      <% end %>
+    </div>
+    
+    <ul class="user-tabs user-tabs-chat">
+      <li><%= link_to("投稿", "/users/#{@user.id}") %></li>
+      <li><%= link_to("いいね!", "/users/#{@user.id}/likes") %></li>
+      <li class="active"><%= link_to("チャット", "/users/#{@user.id}/chat") %></li>
+      <% if @current_user %>
+      <li><%= link_to("購入履歴", "/users/#{@user.id}/history") %></li>
+      <% end %>
+    </ul>
+    
+    <%= form_tag("/chats/#{@user.id}/create") do %>
+      <div class="form form-chat">
+        <div class="form-body form-body-chat">
+          <p>メッセージを送る</p>
+          <textarea name="content"></textarea>
+          <input type="submit" value="投稿">
+        </div>
+      </div>
+    <% end %>
+        
+    <div class="container-chat">
+    <% @chats.order(created_at: :desc).each do |chat| %>
+    <% user = User.find_by(id: chat.post_id) %>
+      <div class="posts-index-item-chat">
+        <div class="post-left-chat">
+          <img src="<%= "/user_images/#{chat.image_name}" %>">
+        </div>
+        <div class="post-right-chat">
+          <div class="chat-name">
+            <%= chat.name %>
+          </div>
+          <div class="chat-content">
+          </div>
+          <%= chat.content %>
+        </div>
+        <div>
+          <% if chat.user_id == @current_user.id %>
+          <%= link_to("/chats/#{chat.id}/destroy", {method: "post"}) do %>
+           <span class="fa fa-times times-btn"></span>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  </div>
+</div>

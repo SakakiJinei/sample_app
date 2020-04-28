@@ -1,0 +1,17 @@
+<div class="main users-index">
+  <div class="container">
+    <h1 class="form-heading">ユーザー一覧</h1>
+    <%= will_paginate @users, previous_label: '&lt 前へ', next_label: '次へ &gt' %>
+    <% @users.each do |user| %>
+      <div class="users-index-item">
+        <div class="user-left">
+          <img src="<%= "/user_images/#{user.image_name}" %>">
+        </div>
+        <div class="user-right">
+          <%= link_to(user.name, "/users/#{user.id}") %>
+        </div>
+      </div>
+    <% end %>
+    <%= will_paginate @users, previous_label: '&lt 前へ', next_label: '次へ &gt' %>
+  </div>
+</div>

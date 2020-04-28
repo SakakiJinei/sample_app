@@ -1,0 +1,40 @@
+<div class="main user-show">
+  <div class="container">
+    <div class="user">
+      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <h2><%= @user.name %></h2>
+      <p><%= @user.email %></p>
+      <% if @user.id == @current_user.id %>
+        <%= link_to("編集", "/users/#{@user.id}/edit") %>
+        <%= link_to("退会", "/users/#{@user.id}/destroy", {method: "post"}) %>
+      <% end %>
+    </div>
+    
+    <ul class="user-tabs user-tabs-chat">
+      <li><%= link_to("投稿", "/users/#{@user.id}") %></li>
+      <li><%= link_to("いいね!", "/users/#{@user.id}/likes") %></li>
+      <li><%= link_to("チャット", "/users/#{@user.id}/chat") %></li>
+      <% if @current_user %>
+      <li class="active"><%= link_to("購入履歴", "/users/#{@user.id}/history") %></li>
+      <% end %>
+    </ul>
+    
+    <% @buys.each do |buy| %>
+      <div class="posts-index-item">
+        <div class="post-left-index">
+          <img src="<%= "/post_images/#{buy.image_name}" %>">
+        </div>
+        <div class="post-right-index">
+          <div class="post-user-name">投稿者：
+            <%= link_to(buy.name, "/users/#{buy.post_id}") %>
+          </div>
+          <p>カテゴリー：<%= buy.category %></p>
+          <p><%= link_to(buy.title, "/posts/#{buy.post_id}") %></p>
+          <p><%= buy.price %>円</p>
+          <p>合計：<%= buy.total %>円</p>
+    
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

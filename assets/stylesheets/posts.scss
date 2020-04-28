@@ -1,0 +1,418 @@
+/* posts/index ================================ */
+.posts-index-item {
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.posts-list-item {
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.posts-index-item-chat {
+  padding: 3px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.posts-index-item-chat {
+  padding: 0 30px;
+  margin: 1px 0;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.post-left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+}
+
+.post-left-index img {
+  width: 150px;
+  height: 100px;
+  border-radius: 10%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+}
+
+.post-left-show img {
+  width: 300px;
+  height: 200px;
+  border-radius: 5%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.post-left-chat img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+  margin-top: 7px;
+}
+
+.post-user a {
+  font-weight: 600;
+}
+
+.post-user-name a {
+  font-weight: 600;
+}
+
+.post-user-name a:hover {
+  color: #3ecdc6;
+}
+
+.post-left {
+  float: left;
+  width: 10%;
+}
+
+.post-left-index {
+  float: left;
+  width: 30%;
+}
+
+.post-left-chat {
+  float: left;
+  width: 5%;
+}
+
+.post-right {
+  float: left;
+  width: 90%;
+  padding-left: 25px;
+  text-align: left;
+}
+
+.post-right-index {
+  float: left;
+  width: 70%;
+  padding-left: 25px;
+  text-align: left;
+}
+
+.post-right-index a {
+  font-weight: bold;
+}
+
+.post-right-show {
+  float: left;
+  width: 100%;
+  padding: 20px 0 20px 25px;
+  text-align: left;
+}
+
+.post-right-show a {
+  font-size: 24px;
+}
+
+.post-right-buy {
+  padding-left: 25px;
+}
+
+.post-right-buy a {
+  font-size: 12px;
+  color: white;
+}
+
+.post-right-buy p {
+  font-size: 10px;
+}
+
+.post-right-chat {
+  float: left;
+  width: 90%;
+  padding-left: 25px;
+  text-align: left;
+}
+
+
+/* posts/show ================================ */
+.posts-show form {
+  display: inline;
+}
+
+.posts-show-item {
+  width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+  overflow: hidden;
+}
+
+.post-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  box-shadow: 0 2px 6px #c1ced7;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.posts-show-item .post-user-name a {
+  vertical-align: middle;
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+.posts-show-item p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.post-time {
+  color: #8899a6;
+  margin-bottom: 10px;
+}
+
+.like-btn {
+  color: #8899a6;
+}
+
+.like-btn-unlike {
+  color: #ff2581;
+}
+
+.posts-show-item .fa {
+  font-size: 16px;
+  margin-right: 3px;
+}
+
+.post-menus {
+  float: right;
+}
+
+.post-menus a, .post-menus input {
+  color: #8899a6;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.post-buy {
+  margin: 20px 0;
+}
+
+.post-buy a {
+  padding: 8px 10px;
+  background: #3ecdc6;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.post-buy input {
+  padding: 8px 10px;
+  background: #3ecdc6;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.buy {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.post-value a {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* posts/new ================================ */
+.posts-new textarea {
+  font-size: 20px;
+  padding: 10px;
+  min-height: 140px;
+  border: 1px solid rgb(216, 218, 223);
+  resize: none;
+}
+
+.posts-new textarea::-webkit-input-placeholder {
+  font-size: 24px;
+  opacity: 0.5;
+}
+
+.textarea {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  min-height: 140px;
+  border: 1px solid rgb(216, 218, 223);
+  resize: none;
+}
+
+/* posts/list ================================ */
+.posts-content-list {
+
+}
+
+/* search ================================ */
+.searchs-all {
+  padding-top: 70px;
+}
+
+.searchs {
+  text-align: cexter;
+  padding-top: 30px;
+}
+
+.search_name {
+  text-align: center;
+  font-size: 13px;
+}
+
+.search{
+  position: relative;
+  max-width: 270px;
+  margin-bottom: 15px;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.sbox{
+  position: absolute;
+  left: 0;
+  top: 0; 	
+  width: 270px;
+  outline: 0;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 2px 0 0 2px;
+  background: #eee;
+}
+
+.sbtn{
+  width: 70px;
+  height: 30px;
+  position: absolute;
+  left: 270px;
+  border-radius: 0 2px 2px 0;
+  background: #3ecdc6;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.sbtn:hover{
+  color: #666;
+}
+
+.interval {
+  padding-top: 14px;
+}
+
+/*    レスポンシブ ============================== */
+@media screen and (min-width:350px) and (max-width:680px) {
+.container-index {
+  max-width: 90%;
+  margin: auto;
+  padding: 45px 0;
+  clear: both;
+}
+
+.post-left-index img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+}
+
+.posts-show-item {
+  width: 90%;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+  overflow: hidden;
+}
+
+.posts-list-item {
+  width: 90%;
+  margin: auto;
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.posts-index-item-chat {
+  width: 90%;
+  margin: auto;
+  padding: 3px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+}
+
+@media screen and (min-width:680px) and (max-width:1023px) {
+.container-index {
+  max-width: 80%;
+  margin: auto;
+  padding: 45px 0;
+  clear: both;
+}
+
+.posts-list-item {
+  width: 600px;
+  margin: auto;
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.post-left-index img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+}
+
+.form {
+  width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.post-left-index {
+  width: 30%;
+}
+
+.post-right-index {
+  float: left;
+  width: 70%;
+  padding-left: 25px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.post-right-index a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.post-right-buy {
+  width: 600px;
+  margin:auto;
+  padding-left: 25px;
+}
+}

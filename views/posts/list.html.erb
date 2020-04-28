@@ -1,0 +1,43 @@
+<div class="main users-index">
+  <div class="container">
+    <h1 class="form-heading">評価一覧</h1>
+        <% @stars.order(created_at: :desc).each do |star| %>
+        <% post = Post.find_by(id: star.post_id) %>
+          <div class="row posts">
+ 
+          <div class="posts-list-item">
+            <div class="post-left">
+              <img src="<%= "/user_images/#{star.image_name}" %>">
+            </div>
+            <div>
+              
+            </div>
+            <div class="post-right">
+            <p><%= star.name %></p>
+            <h4 class="mb-3">評価：<%= star.rate %>点 | <%= star.title %></h4>
+             <div id="star-rate-<%= star.id %>"></div>
+              <script>
+              $('#star-rate-<%= star.id %>').raty({
+                size: 36,
+                starOff:  '<%= asset_path('star-off.png') %>',
+                starOn : '<%= asset_path('star-on.png') %>',
+                starHalf: '<%= asset_path('star-half.png') %>',
+                half: true,
+                readOnly: true,
+                score: <%= star.rate %>,
+              });
+              </script>  
+              <p><%= star.content %></p>
+              <p><%= star.created_at %></p>
+            </div>
+            <% if star.user_id == @current_user.id %>
+              <div class="post-menus">
+                <%= link_to("編集", "/values/#{star.id}/edit") %>
+                <%= link_to("削除", "/values/#{star.id}/destroy", {method: "post"}) %>
+              </div>
+            <% end %>
+            </div>
+          </div>
+        <% end %>
+  </div>
+</div>

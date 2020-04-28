@@ -1,0 +1,611 @@
+/* reset ================================ */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+html {
+  font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2d3133;
+  font-size: 14px;
+}
+
+a:hover {
+  color: orange;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+input {
+  background-color: transparent;
+  outline-width: 0;
+}
+
+form input[type="submit"] {
+  border: none;
+  cursor: pointer;
+}
+
+/* 共通レイアウト ================================ */
+body {
+
+}
+
+.main {
+  top: 64px;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 64px 0;
+  clear: both;
+}
+
+.container-index {
+  max-width: 600px;
+  margin: auto;
+  padding: 45px 0;
+  clear: both;
+}
+
+.container-chat {
+  padding: 0;
+}
+
+/* ヘッダー ================================ */
+header {
+  height: 64px;
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  background-color: #f5f8fa;
+}
+
+.header-logo {
+  float: left;
+  padding-left: 20px;
+  color: black;
+  font-size: 22px;
+  line-height: 64px;
+}
+
+.header-logo a{
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.header-menus li {
+  font-size: 13px;
+  color: black;
+  padding: 25px 15px 0;
+  font-weight: bold;
+}
+
+.header-menus a {
+  font-size: 13px;
+  color: black;
+  font-weight: bold;
+}
+
+.header-menus .fa {
+  padding-right: 5px;
+}
+
+.header-menus input[type="submit"] {
+  padding: 0 20px;
+  float: left;
+  line-height: 64px;
+  color: white;
+  margin: 0;
+  font-size: 13px;
+}
+
+/* top ================================ */
+.top-main {
+  text-align: center;
+  top: 0;
+  width: 100%;
+  height: 700px;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: cover;
+  background-image: url("/japan_map.png");
+  background-size: 40%;
+}
+
+.top-message {
+  padding-top: 150px;
+}
+
+.top-main h1 {
+  opacity: 0.6;
+  letter-spacing: 5px;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 40px;
+}
+
+.top-main h2 {
+  opacity: 0.6;
+  letter-spacing: 5px;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 40px;
+}
+
+.top-main p {
+  opacity: 0.6;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+}
+
+.btn1 {
+  padding: 0 24px 3px;
+  color: white;
+  display: inline-block;
+}
+
+.signup {
+  background-color: #239b76;
+  border-radius: 20px;
+}
+
+.facebook {
+  background-color: #3b5998;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+.twitter {
+  background-color: #55acee;
+  border-radius: 20px;
+}
+
+.btn-wrapper {
+  margin: 20px 0px;
+  padding-top: 120px;
+}
+
+.btn-wrapper p {
+  margin: 0 0 10px;
+}
+
+/* about ================================ */
+.about-main {
+  padding: 180px 8% 0;
+  color: white;
+  background-image: url("/japan_map.png");
+  background-size: 50%;
+}
+
+.about-main h2 {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.about-main p {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.about-img {
+  width: 84%;
+}
+
+/* フォーム================================ */
+.form {
+  width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.form-heading {
+  font-weight: 300;
+  margin: 0 0 20px;
+  padding: 30px 25px 0;
+  font-size: 48px;
+  color: #bcc8d4;
+}
+
+.form-heading-value {
+  font-weight: 300;
+  margin: 0 0 20px;
+  font-size: 48px;
+  color: #bcc8d4;
+}
+
+.form-body {
+  padding: 30px;
+}
+
+.form-body-chat {
+  padding: 16.67px 30px;
+}
+
+.form-body-chat p {
+  font-size: 13px;
+}
+
+.form-buy {
+  width: 100px;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.form-error {
+  color: #ff4d75;
+}
+
+.form-value {
+  width: 600px;
+  margin: 20px auto;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.form input {
+  width: 100%;
+  border: 1px solid #d8dadf;
+  padding: 10px;
+  color: #57575f;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #d8dadf;
+  padding: 10px;
+  color: #57575f;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+}
+
+.form textarea {
+  width: 100%;
+  min-height: 110px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.form-chat textarea {
+  width: 100%;
+  min-height: 60px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.form input[type="submit"] {
+  background-color: #3ecdc6;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  width: 120px;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  float: right;
+}
+
+.form-body:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* フラッシュ ================================ */
+.flash {
+  margin: auto;
+  padding: 5px 0;
+  color: red;
+  text-align: center;
+  position: absolute;
+  top: 64px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  width: 40%;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}
+
+/* フッター ================================ */
+footer {
+  height: 40px;
+  z-index: 1;
+  width: 100%;
+  padding: 0 100px;
+  background-color: #f5f8fa;
+}
+
+footer ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+footer li {
+	line-height: 40px;
+	margin: 10px;
+}
+
+.footer-menus {
+	text-align: center;
+}
+
+.footer-menus li {
+	display: inline;
+}
+
+.footer-menus a {
+  color: #bbbbbb;
+}
+
+/*  利用規約 ================================ */
+.terms {
+  padding-top: 40px;
+}
+
+.term {
+  padding: 10px 0;
+}
+
+.required {
+  background-color: red;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 2px 3px 0;
+  border-radius: 30px;
+}
+
+/*   ハンバーガーメニュー ============================== */
+
+#nav-drawer {
+  float: right;
+  padding: 19px 30px 0 0;
+}
+
+.nav-unshown {
+  display:none;
+}
+
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #555;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+
+#nav-open span:before {
+  bottom: -8px;
+}
+
+#nav-open span:after {
+  bottom: -16px;
+}
+
+#nav-close {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 184px;
+  height: 100%;
+  background: #fff;
+  transition: .3s ease-in-out;
+  -webkit-transform: translateX(-105%);
+  transform: translateY(-105%);
+}
+
+#nav-input:checked ~ #nav-close {
+  display: block;
+  opacity: 0.5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+.pagination li {
+  float: left;
+  padding: 0 5px;
+}
+
+.pagination li.active {
+  font-weight: bold;
+}
+
+.about {
+  padding: 10px 20px;
+}
+
+.sample {
+  font-size: 12px;
+}
+
+/*    レスポンシブ ============================== */
+
+@media screen and (min-width:350px) and (max-width:680px) {
+.container-term {
+  width: 90%;
+  margin: auto;
+}
+
+.top-main {
+  text-align: center;
+  top: 0;
+  width: 100%;
+  height: 620px;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: cover;
+  background-image: url("/japan_map.png");
+  background-size: 80%;
+}
+
+.top-message {
+  padding-top: 120px;
+}
+
+.top-main h1 {
+  opacity: 0.6;
+  letter-spacing: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 50px;
+}
+
+.top-main h2 {
+  opacity: 0.6;
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 40px;
+}
+
+.btn-wrapper {
+  padding-top: 60px;
+}
+
+.form {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.form-value {
+  width: 90%;
+  margin: 20px auto;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.top-main .about {
+  font-size: 15px;
+}
+}
+
+@media screen and (min-width:680px) and (max-width:1023px) {
+.top-main h1 {
+  opacity: 0.6;
+  letter-spacing: 5px;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 50px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 64px 0;
+  clear: both;
+}
+
+.container-index {
+  max-width: 900px;
+  margin: auto;
+  padding: 45px 0;
+  clear: both;
+}
+
+.form {
+  width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.top-main {
+  text-align: center;
+  top: 0;
+  width: 100%;
+  height: 700px;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: cover;
+  background-image: url("/japan_map.png");
+  background-size: 60%;
+}
+
+.header-menus a {
+  font-size: 13px;
+  color: black;
+  font-weight: bold;
+}
+
+.top-main .about {
+  font-size: 20px;
+}
+}

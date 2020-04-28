@@ -1,0 +1,16 @@
+<div class="main posts-show">
+  <div class="container">
+    <h1 class="form-heading">合計金額</h1>
+    <div class="post-right-buy">
+      <div class="total">
+      合計金額:<%= @buy.total %>円
+    </div>
+    <div class="yes"><%= link_to("着払いで支払う", "/buys/finish") %></div>
+    <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="公開鍵"></script>
+    <div class="no"><%= link_to("購入しない", "/buys/#{@buy.post_id}/destroy") %></div>
+    <p>＊購入しない場合はブラウザバックせずに購入しないボタンを押して下さい</p>
+    </div>
+  </div>
+</div>
+
+ 
