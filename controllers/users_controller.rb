@@ -115,7 +115,7 @@ class UsersController < ApplicationController
   def submit
     @user = User.find_by(email: params[:email])
     
-    if @user.save
+    if @user
       redirect_to("/password/#{@user.id}")
     else
       redirect_to("/email")
