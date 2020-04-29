@@ -12,7 +12,8 @@
           <p>商品名</p>
           <input name="title" value="<%= @post.title %>">
           <p>都道府県</p>
-          <select name="category">
+          <div class="cp_ipselect cp_sl04">
+          <select name="category interval">
             <option value="">選択してください</option>
             <option value="北海道">北海道</option>
             <option value="青森県">青森県</option>
@@ -61,7 +62,8 @@
             <option value="宮崎県">宮崎県</option>
             <option value="鹿児島県">鹿児島県</option>
             <option value="沖縄県">沖縄県</option>
-          </select>
+          </select>  
+          </div>
           <p>画像</p>
           <input name="image" type="file">
           <p>内容</p>
